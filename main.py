@@ -8,6 +8,8 @@ driver.get("https://www.linkedin.com")
 login_by_email = driver.find_element(by=By.XPATH, value='//*[@id="main-content"]/section[1]/div/div/a')
 login_by_email.click()
 
+user_input = driver.find_element(by=By.ID, value="username").send_keys("helloworld@test.com")
+pass_input = driver.find_element(by=By.ID, value="password").send_keys("teste123321")
 
 sleep(5)
 driver.close()
